@@ -2,9 +2,9 @@ define([
 	"./number-re",
 	"./pattern-properties",
 	"./symbol",
-	"./symbol/map",
+	"./symbol/inverted-map",
 	"../util/regexp/escape"
-], function( numberNumberRe, numberPatternProperties, numberSymbol, numberSymbolMap, regexpEscape ) {
+], function( numberNumberRe, numberPatternProperties, numberSymbol, numberSymbolInvertedMap, regexpEscape ) {
 
 /**
  * parse( value, cldr )
@@ -29,7 +29,7 @@ return function( value, pattern, cldr ) {
 	// Finite number.
 	} else {
 
-		symbolMap = numberSymbolMap( cldr );
+		symbolMap = numberSymbolInvertedMap( cldr );
 		localizedSymbolsRe = new RegExp( Object.keys( symbolMap ).map(function( localizedSymbol ) {
 			return regexpEscape( localizedSymbol );
 		}).join( "|" ), "g" );

@@ -1,5 +1,5 @@
 define([
-	"src/number/format/grouping-separator"
+	"src/number/formatter/grouping-separator"
 ], function( groupingSeparator ) {
 
 QUnit.module( "Number Format Grouping Separator" );

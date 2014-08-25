@@ -23,10 +23,10 @@ require([
 	"./unit/message/translate",
 
 	// number
-	"./unit/number/format/integer-fraction-digits",
-	"./unit/number/format/significant-digits",
-	"./unit/number/format/grouping-separator",
-	"./unit/number/format",
+	"./unit/number/formatter/integer-fraction-digits",
+	"./unit/number/formatter/significant-digits",
+	"./unit/number/formatter/grouping-separator",
+	"./unit/number/formatter",
 	"./unit/number/parse"
 
 ], function() {
